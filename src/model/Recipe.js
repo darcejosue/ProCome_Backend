@@ -11,7 +11,7 @@ const RecipeSchema = new Schema({
         required: true,
         trim: true
     },
-    recipeIngredients: [ String],
+    recipeIngredients: [ {type:String, trim: true}],
     recipePreparation: {
         type: String,
         required: true,
