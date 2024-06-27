@@ -33,7 +33,8 @@ export class StockController{
                 return res.status(404).json({error: err.message})
             }
             res.json(stock)
-        } catch (error) {
+        } 
+        catch (error) {
             console.log(colors.red.bold(error.message));
         }
     }
@@ -45,7 +46,7 @@ export class StockController{
             const stock = await Stock.findByIdAndUpdate(id, req.body)
             
             await stock.save()
-            res.send('Stock update')
+            res.send('Stock updated successfully')
         } catch (error) {
             console.log(error.message);
         }

@@ -9,4 +9,18 @@ router.post('/',
     RecipeController.createRecipe
 )
 
+router.get('/',
+    RecipeController.getAllRecipe)
+
+router.get('/:id',
+        RecipeController.getRecipeById)
+    
+router.put('/:id', 
+    handleInputErrors,
+    RecipeController.updateRecipeById
+)
+
+router.delete('/:id',
+    RecipeController.deleteRecipeById
+)
 export default router
