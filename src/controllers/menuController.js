@@ -14,7 +14,7 @@ export class MenuController{
 
     static getAllMenu = async(req, res)=>{
         try {
-            const menu = await Menu.findById({})
+            const menu = await Menu.find({})
             res.json(menu);            
         } catch (error) {
             console.error(error);
@@ -38,7 +38,7 @@ export class MenuController{
     static updateMenu = async(req, res)=>{
         const {id} = req.params
         try {
-            const menu = await Menu.findByIdAndUpdate(id, reeq.body)
+            const menu = await Menu.findByIdAndUpdate(id, req.body)
             await menu.save()
             res.send('Updated menu successfully')
         } catch (error) {
