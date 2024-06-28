@@ -1,0 +1,27 @@
+import mongoose, {Schema} from "mongoose";
+
+const MenuSchema = new Schema({
+    menuSaucer: { //que plato se hara
+        type: String,
+        required: true,
+        trim: true
+    },
+    menuPreparationDay: { //Dia de la semana o por fecha
+        type: String,
+        required: true,
+        trim: true
+    },
+    menuMealtime: { //desayuno, almuerzo o cena
+        type:String, 
+        required: true,
+        trim: true
+    },
+    menuPortions: { //cuantos platos se cocinaran
+        type: Number,
+        required: true,
+        trim: true
+    }
+})
+
+const Menu = mongoose.model('Menu', MenuSchema)
+export default Menu

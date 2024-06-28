@@ -6,16 +6,27 @@ const StockSchema = new Schema({
         required: true,
         trim: true
     },
-    stockDescription: {
+    stockCategory: { //fruta, verdura, carne, aceite, granos, etc
         type: String,
         required: true,
         trim: true
     },
-    stockQuantity: {
+    stockUnitMesure: { //litros, libras, unidades, etc
+        type: String,
+        required: true,
+        trim: true
+    },
+    stockDescription: { //opcional
+        type: String,
+        trim: true
+    },
+    stockQuantity: { //cuanto de este producto esta entrando
         type: Number,
         required: true,
         trim: true
-    },stockPrice: {
+
+    },
+    stockPrice: { //precio individual del producto
         type: Number,
         required: true,
         trim: true

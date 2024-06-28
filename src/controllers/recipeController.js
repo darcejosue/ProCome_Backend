@@ -1,4 +1,3 @@
-import { json } from "express";
 import Recipe from "../model/Recipe.js";
 
 export class RecipeController{
