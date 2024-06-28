@@ -1,4 +1,4 @@
-import Menu from "../model/Menu";
+import Menu from "../model/Menu.js";
 
 export class MenuController{
 

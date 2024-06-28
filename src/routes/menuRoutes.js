@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { MenuController } from "../controllers/menuController";
-import { handleInputErrors } from "../middleware/validation";
+import { MenuController } from "../controllers/menuController.js";
+import { handleInputErrors } from "../middleware/validation.js";
 
 const router = new Router();
 
@@ -20,3 +20,5 @@ router.put('/:id',
 router.delete('/:id',
     MenuController.deleteMenu
 )
+
+export default router;
