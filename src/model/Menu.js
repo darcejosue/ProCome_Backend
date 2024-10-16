@@ -2,9 +2,8 @@ import mongoose, {Schema} from "mongoose";
 
 const MenuSchema = new Schema({
     menuSaucer: { //que plato se hara
-        type: String,
-        required: true,
-        trim: true
+        type: Schema.Types.ObjectId,
+        ref: 'Recipe'
     },
     menuPreparationDay: { //Dia de la semana o por fecha
         type: String,

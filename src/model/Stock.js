@@ -7,12 +7,12 @@ const StockSchema = new Schema({
         trim: true
     },
     stockCategory: { //fruta, verdura, carne, aceite, granos, etc
-        type: String,
+        type: Number,
         required: true,
         trim: true
     },
     stockUnitMesure: { //litros, libras, unidades, etc
-        type: String,
+        type: Number,
         required: true,
         trim: true
     },
@@ -30,9 +30,18 @@ const StockSchema = new Schema({
         type: Number,
         required: true,
         trim: true
+    },
+    stockSupplier:{ //precio individual del producto
+        type: Schema.Types.ObjectId,
+        ref: 'Supplier',
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
-
-})
+} 
+)
 
 const Stock = mongoose.model('Stock', StockSchema);
 export default Stock;

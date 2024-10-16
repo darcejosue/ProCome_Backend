@@ -10,7 +10,7 @@ export class StockController{
             res.send('create success')
         }
         catch (e) {
-            console.log(colors.red.bold(e.message));
+            console.log(e.message);
         }
     }
 
@@ -19,7 +19,7 @@ export class StockController{
             const stock = await Stock.find({});
             res.json(stock)
         } catch (error) {
-            console.log(colors.red.bold(error.message));
+            console.log(error.message);
         }
     }
 
@@ -35,7 +35,7 @@ export class StockController{
             res.json(stock)
         } 
         catch (error) {
-            console.log(colors.red.bold(error.message));
+            console.log(error.message);
         }
     }
 
@@ -64,7 +64,7 @@ export class StockController{
            await stock.deleteOne()
            res.send('Stock deleted')
         } catch (error) {
-            console.log(colors.red.bold(error.message));
+            console.log(error.message);
         }
     }
 
