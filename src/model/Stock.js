@@ -7,12 +7,12 @@ const StockSchema = new Schema({
         trim: true
     },
     stockCategory: { //fruta, verdura, carne, aceite, granos, etc
-        type: Number,
+        type: String,
         required: true,
         trim: true
     },
     stockUnitMesure: { //litros, libras, unidades, etc
-        type: Number,
+        type: String,
         required: true,
         trim: true
     },

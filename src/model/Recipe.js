@@ -11,13 +11,9 @@ const RecipeSchema = new Schema({
     required: true,
     trim: true,
   },
-  recipeIngredients: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Stock",
-    },
-    { type: Number, required: true, trim: true },
-  ],
+  recipeIngredients: 
+    { type: [], 
+      trim: true },
   recipePreparation: {
     type: String,
     required: true,

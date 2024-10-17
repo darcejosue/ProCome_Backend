@@ -16,7 +16,7 @@ export class StockController{
 
     static getAllStock = async(req, res)=>{
         try {
-            const stock = await Stock.find({});
+            const stock = await Stock.find({}).populate('stockSupplier').exec();
             res.json(stock)
         } catch (error) {
             console.log(error.message);

@@ -6,7 +6,7 @@ const MenuSchema = new Schema({
         ref: 'Recipe'
     },
     menuPreparationDay: { //Dia de la semana o por fecha
-        type: String,
+        type: Date,
         required: true,
         trim: true
     },
