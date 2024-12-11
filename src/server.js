@@ -6,6 +6,7 @@ import stockRoutes from './routes/stockRoutes.js';
 import recipeRoutes from './routes/recipeRoutes.js';
 import userRoutes from './routes/userRouter.js';
 import menuRoutes from './routes/menuRoutes.js';
+import perdidaRoutes from './routes/perdidaRoutes.js';
 import supplierRoutes from './routes/supplierRoutes.js'
 import personalRoutes from './routes/personalRoutes.js'
 
@@ -25,6 +26,7 @@ app.use('/api/stock',stockRoutes)
 app.use('/api/recipe',recipeRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/menu', menuRoutes)
+app.use('/api/perdida', perdidaRoutes)
 app.use('/api/supplier', supplierRoutes)
 app.use('/api/personal', personalRoutes)
 
