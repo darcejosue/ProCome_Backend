@@ -25,17 +25,6 @@ router.get('/:id',
     StockController.getStockById)
 
 router.put('/:id',
-    param('id').isMongoId().withMessage('ID No valido'),
-    handleInputErrors,
-    body('stockName')
-    .notEmpty().withMessage('El nombre del producto es obligatorio'),
-    body('stockDescription')
-    .notEmpty().withMessage('La descripció del producto es obligatorio'),
-    body('stockQuantity')
-    .notEmpty().withMessage('La cantidad del producto es obligatorio'),
-    body('stockPrice')
-    .notEmpty().withMessage('El precio del producto es obligatorio'),
-    handleInputErrors,
     StockController.updateStockById)
 
 router.delete('/:id',

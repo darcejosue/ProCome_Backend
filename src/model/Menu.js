@@ -19,6 +19,10 @@ const MenuSchema = new Schema({
         type: Number,
         required: true,
         trim: true
+    }, 
+    menuEstado: { 
+        type: Boolean,
+        default: false
     }
 })
 

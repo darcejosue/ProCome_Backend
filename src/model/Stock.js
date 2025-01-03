@@ -36,6 +36,10 @@ const StockSchema = new Schema({
         ref: 'Supplier',
         required: true,
     },
+    stockAlert:{
+        type: Number,
+        trim: true
+    },
     createdAt: {
         type: Date,
         default: Date.now
